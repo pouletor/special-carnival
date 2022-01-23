@@ -1,0 +1,13 @@
+.quote {
+  background-color: var(--light-gray);
+  color: var(--dark);
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  &::before {
+    content: "“";
+  }
+  &::after {
+    content: "”";
+  }
+}

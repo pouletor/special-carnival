@@ -1,0 +1,65 @@
+.search-input__wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.search-input {
+  font-weight: 300;
+  border: 1px solid var(--light-gray);
+  background-color: var(--light);
+  border-radius: 0.5rem;
+  padding: 0 0.8rem;
+  height: 2.5rem;
+  transition: padding 0.4s ease;
+  padding-right: 2.5rem;
+
+  &:focus {
+    border: 1px solid var(--medium-gray);
+    outline-width: 0;
+  }
+
+  &--active {
+    &,
+    &:focus,
+    &:hover {
+      font-weight: 600;
+      border-color: var(--primary-blue);
+      color: var(--primary-blue);
+    }
+
+    &:hover {
+      border-color: var(--primary-blue-active);
+    }
+  }
+
+  &.search-input__with-left-icon {
+    padding-left: 2.5rem;
+  }
+
+  // remove cross icon on IE
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+.search-input__icon {
+  height: 2.5rem;
+  max-height: 2.5rem;
+  max-width: 2.5rem;
+  min-height: 2.5rem;
+  min-width: 2.5rem;
+  cursor: pointer;
+  color: var(--primary-blue);
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  padding: 0;
+
+  &--left {
+    left: 0;
+  }
+
+  &--right {
+    right: 0;
+  }
+}
